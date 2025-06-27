@@ -1,0 +1,8 @@
+main:
+- name: Projects
+  pageRef: projects
+  weight: 10
+
+- name: Tags
+  pageRef: tags
+  weight: 50

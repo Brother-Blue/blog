@@ -1,0 +1,10 @@
+{
+  "name": "Chris",
+  "image": "img/chris.jpg",
+  "bio": "DevOps Engineer, Automation Enthusiast, and now part time blogger.",
+  "social": [
+    { "github": "https://github.com/brother-blue" },
+    { "linkedin" : "https://www.linkedin.com/in/its-christian-oneill/" },
+    { "medium" : "https://medium.com/@oneill.christian97" }
+  ]
+}

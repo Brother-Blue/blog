@@ -1,0 +1,44 @@
+colorScheme: fire
+defaultAppearance: light
+autoSwitchAppearance: true
+
+enableSearch: true
+enableCodeCopy: true
+
+replyByEmail: false
+
+header:
+  layout: fixed
+
+homepage:
+  # cardView: false
+  homepageImage: image.jpg
+  layout: background
+  layoutBackgroundBlur: false
+  showRecent: true
+  showRecentItems: 5
+  showMoreLinkDest: "/projects/"
+
+article:
+  heroStyle: background
+  layoutBackgroundBlur: false
+  showAuthor: true
+  showAuthorsBadges: false
+  showBreadcrumbs: true
+  showDate: true
+  showDraftLabel: true
+  showHero: true
+  # showLikes: true
+  sharingLinks:
+    - linkedin
+    - twitter
+    - reddit
+    - whatsapp
+  showTableOfContents: true
+  # showViews: true
+  showZenMode: true
+
+list:
+  showHero: true
+  # showViews: true
+  # showLikes: true

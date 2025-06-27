@@ -1,0 +1,37 @@
+baseURL: 'https://blog.brother-blue.com/'
+languageCode: 'en-us'
+title: 'Brother Blue Blog'
+theme: 'blowfish'
+
+defaultContentLanguage: en
+defaultContentLanguageInSubdir: true
+
+staticDir:
+- "static"
+
+languages:
+  en:
+    languageCode: en-us
+    languageName: usEN
+    contentDir: "content/en"
+    weight: 1
+
+params:
+  bannershowcase:
+    limit: 2
+  ignore:
+    categories:
+    - privacy
+    - terms
+    - archives
+    - cookie
+
+outputs:
+  home:
+  - HTML
+  - JSON
+
+taxonomies:
+  tag: tags
+  category: categories
+  author: authors
