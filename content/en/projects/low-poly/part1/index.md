@@ -9,12 +9,15 @@ draft: false
 tags:
 - CLI
 - Go
-- because I could
+- Because I could
 categories:
 - Media
 - Art
 authors:
 - chris
+series:
+- "Low Poly"
+series_order: 1
 ---
 
 ## The Background
@@ -66,9 +69,9 @@ Now that the random points have been added to the image, the next step is for ac
 {{< alert "lightbulb" >}}
 You can find more information about [Delaunay Triangulation](https://en.wikipedia.org/wiki/Delaunay_triangulation) in this article.
 {{< /alert >}}
-There is a lot of geometry that goes into calculating the triangulation, presence of additional points, intersecting triangulations, and so on. So instead of reinventing the mathematical wheel (for now at least) I opted for a wonderful library by Fogleman, for Delaunay Triangulation, substantially speeding up my development of this project. I could of course sit down for hours and create my own, and down the line I may do it for the sake of gaining a deeper understanding of the math behind poly-fication, but frankly this was more just for fun.
+There is a lot of geometry that goes into calculating the triangulation, presence of additional points, intersecting triangulations, and so on. So instead of reinventing the mathematical wheel (for now at least) I opted for a wonderful package by Fogleman, for Delaunay Triangulation, substantially speeding up my development of this project. I could of course sit down for hours and create my own, and down the line I may do it for the sake of gaining a deeper understanding of the math behind poly-fication, but frankly this was more just for fun.
 {{< github repo="fogleman/delaunay" showThumbnail=false >}}
-With this in place, creating the triangulations was a breeze. I started out by creating a set of points the Delaunay library required for triangulation, passed them in, and got my triangulations out. No flair, just simple and understandable.
+With this in place, creating the triangulations was a breeze. I started out by creating a set of points the Delaunay package required for triangulation, passed them in, and got my triangulations out. No flair, just simple and understandable.
 ```go
 // Delaunay triangulation
 delPoints := make([]delaunay.Point, len(points))
@@ -171,7 +174,7 @@ func fillTriangle(img *image.RGBA, ax, ay, bx, by, cx, cy float64, col color.Col
 }
 ```
 
-Finally, all of these components could be wired together. I started by creating a new output image with. From there I then iterated over each of the triangulations provided by the Delaunay library, computed the average color, and filled the triangle.
+Finally, all of these components could be wired together. I started by creating a new output image with. From there I then iterated over each of the triangulations provided by the Delaunay package, computed the average color, and filled the triangle.
 ```go
 	out := image.NewRGBA(bounds)
 	draw.Draw(out, bounds, img, bounds.Min, draw.Src)
