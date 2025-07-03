@@ -6,6 +6,8 @@ theme: 'blowfish'
 defaultContentLanguage: en
 defaultContentLanguageInSubdir: true
 
+enableRobotsTXT: true
+
 staticDir:
 - "static"
 
@@ -30,6 +32,7 @@ outputs:
   home:
   - HTML
   - JSON
+  - RSS
 
 taxonomies:
   tag: tags

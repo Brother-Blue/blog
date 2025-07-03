@@ -6,3 +6,7 @@ main:
 - name: Tags
   pageRef: tags
   weight: 50
+
+- name: About Me
+  pageRef: /authors/chris
+  weight: 100
